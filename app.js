@@ -47,13 +47,13 @@ app.get ('/failure', function (req, res){
 
 app.post ('/notifications', function(req, res){
     console.log(req.body);
-    
+
     res.status(200).end('OK')
 });
 
 app.post('/buy', function (req, res){
 
-    const url = 'http://localhost:3000/'
+    const url = 'https://davidmessina-mp-ecommerce-node.herokuapp.com/'
 
     let preference = {
 
