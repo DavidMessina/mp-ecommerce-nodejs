@@ -4,6 +4,8 @@ var port = process.env.PORT || 3000
 
 var app = express();
 
+var bodyParser = require('body-parser')
+
 const mercadopago = require ('mercadopago')
 
 const url = 'https://davidmessina-mp-ecommerce-node.herokuapp.com/'
@@ -23,6 +25,9 @@ app.set('view engine', 'handlebars');
 app.use(express.static('assets'));
  
 app.use('/assets', express.static(__dirname + '/assets'));
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
     res.render('home');
