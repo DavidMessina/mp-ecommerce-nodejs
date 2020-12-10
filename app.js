@@ -6,6 +6,8 @@ var app = express();
 
 const mercadopago = require ('mercadopago')
 
+const url = 'https://davidmessina-mp-ecommerce-node.herokuapp.com/'
+
 mercadopago.configure({
 
     access_token : 'APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398',
@@ -56,8 +58,6 @@ app.post ('/notifications', function (req, res) {
 });
 
 app.post('/buy', function (req, res){
-
-    const url = 'https://davidmessina-mp-ecommerce-node.herokuapp.com/'
 
     let preference = {
 
