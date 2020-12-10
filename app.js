@@ -32,7 +32,11 @@ app.get('/detail', function (req, res) {
 
 app.get ('/success', function (req, res){
     console.log(req.query);
-    return res.render ('success', )
+    return res.render ('success', {
+        payment_type : req.query.payment_type,
+        external_reference : req.query.external_reference,
+        collection_id : req.query.collection_id
+    })
 });
 
 app.get ('/pending', function (req, res){
@@ -46,9 +50,9 @@ app.get ('/failure', function (req, res){
 });
 
 app.post ('/notifications', function(req, res){
-    console.log(req.body);
-
-    res.status(200).end('OK')
+    console.log('Notification', req.body);
+    res.send(req.body);
+    res.status(200).end('OK');
 });
 
 app.post('/buy', function (req, res){
