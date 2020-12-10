@@ -1,0 +1,14 @@
+{
+"action": "payment.created",
+"api_version": "v1",
+"data": { "id": "12596627132" },
+"date_created": "2020-12-10T23:21:48Z",
+"id" : "6775287667",
+"live_mode" : true,
+"type": "payment",
+"user_id" : "469485398"
+}
+
+preference_id= 469485398-97dcc524-2a15-4b90-a8ee-4af9c256670c
+
+12596627132
