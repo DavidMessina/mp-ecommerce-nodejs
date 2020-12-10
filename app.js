@@ -49,10 +49,10 @@ app.get ('/failure', function (req, res){
     return res.render ('failure')
 });
 
-app.post ('/notifications', function(req, res){
-    console.log('Notification', req.body);
-    res.send(req.body);
-    res.status(200).end('OK');
+app.post ('/notifications', function (req, res) {
+    console.log('Notification', req.body)
+    res.send(req.body)
+    /*res.status(200).end('OK');*/
 });
 
 app.post('/buy', function (req, res){
